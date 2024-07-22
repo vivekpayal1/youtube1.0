@@ -2,7 +2,6 @@ import MusicIcon from "../assets/images/music.png";
 import TrendingIcon from "../assets/images/trending.png";
 import MovieIcon from "../assets/images/movieicon.png";
 import ShoppingIcon from "../assets/images/shoppingicon.png";
-import HomeIcon from "../assets/images/home.png";
 import ShotsIcon from "../assets/images/shots.png";
 import Subscription from "../assets/images/subscription.png";
 import { useSelector } from "react-redux";
