@@ -1,7 +1,6 @@
 const VideoCard = ({ info }) => {
-  console.log(info?.statistics?.viewCount);
   return (
-    <div className="overflow-hidden mt-2">
+    <div className="mt-2 overflow-hidden">
       <a href="#">
         <img
           className="w-full rounded-xl"
@@ -9,36 +8,35 @@ const VideoCard = ({ info }) => {
           alt=""
         />
       </a>
-      <div className=" flex gap-2 mt-3">
+      <div className="mt-3 flex gap-2">
         <div>
-          <a href="#" className="w-10 h-10 flex">
+          <a href="#" className="flex h-10 w-10">
             <img
               src={info?.snippet?.thumbnails?.default?.url}
               alt=""
-              className="w-full h-full rounded-full"
+              className="h-full w-full rounded-full"
             />
           </a>
         </div>
         <div className="">
-          <h3 className="font-bold text-[16px]">
-            <a
-              href="#"
-              className="line-clamp-2 overflow-hidden"
-            >
+          <h3 className="text-[16px] font-bold">
+            <a href="#" className="line-clamp-2 overflow-hidden">
               {info?.snippet?.title}
             </a>
           </h3>
           <div>
-            <a href="#" id="channel-name" className="text-[#606060] font-semibold">
+            <a
+              href="#"
+              id="channel-name"
+              className="font-semibold text-[#606060]"
+            >
               {info?.snippet?.channelTitle}
             </a>
           </div>
           <div>
             <a href="#" className="flex text-[#606060]">
               <span>{info?.statistics?.viewCount}views</span>
-              <span className="mx-3">
-                12 days ago
-              </span>
+              <span className="mx-3">12 days ago</span>
             </a>
           </div>
         </div>
@@ -48,3 +46,11 @@ const VideoCard = ({ info }) => {
 };
 
 export default VideoCard;
+
+export function AdVideoCard({ info }) {
+  return (
+    <div className="border-black-400 overflow-hidden rounded-md border-2">
+      <VideoCard info={info} />
+    </div>
+  );
+}
